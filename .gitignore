@@ -2,7 +2,7 @@
 prompts.json
 
 # venv
-venv/
+.venv/
 
 # python cache
 *.pyc
