@@ -30,8 +30,7 @@ def get_prompt_by_name(name):
     for character in characters:
         if character.get("name") == name:
             return character.get("prompt")
-    print(f"Error: Character with name {name} not found.")
-    sys.exit(1)
+    raise ValueError(f"Character with name {name} not found.")
 
 
 pipe = diffusers.StableDiffusionPipeline.from_pretrained("Linaqruf/anything-v3.0")
