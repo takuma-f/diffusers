@@ -1,4 +1,10 @@
-import argparse, json, sys, diffusers, torch, time
+import argparse
+import json
+import sys
+import time
+
+import diffusers
+import torch
 
 parser = argparse.ArgumentParser(
     description="Usage: python any3.py <name> --seed <seed> --steps <steps>"
