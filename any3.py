@@ -34,9 +34,6 @@ def get_prompt_by_name(name):
 
 
 pipe = diffusers.StableDiffusionPipeline.from_pretrained("Linaqruf/anything-v3.0")
-# pipe = diffusers.StableDiffusionPipeline.from_pretrained("xyn-ai/anything-v4.0")
-# pipe.scheduler = diffusers.DDIMScheduler.from_config(pipe.scheduler.config)
-# pipe.safety_checker = lambda images, **kwargs: (images, [False] * len(images))
 pipe.load_textual_inversion(
     "./EasyNegative.safetensors",
     weight_name="EasyNegative.safetensors",
